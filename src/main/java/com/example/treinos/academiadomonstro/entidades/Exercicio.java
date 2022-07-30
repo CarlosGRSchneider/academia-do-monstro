@@ -11,7 +11,7 @@ public class Exercicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(nullable = false, length = 40)
+    @Column(nullable = false, length = 40, unique = true)
     private String nome;
     private String descricao;
     @Column(nullable = false)
@@ -30,6 +30,10 @@ public class Exercicio {
 
     public static Exercicio novoExercicio(ExercicioForm form) {
         return new Exercicio(form.getNome(), form.getDescricao(), GrupoMuscular.valueOf(form.getGrupoMuscular().toUpperCase()));
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNome() {

@@ -77,6 +77,16 @@ class ExercicioControllerTest {
     }
 
     @Test
+    void naoDeveInserirUmExercicioComNomeRepetido() throws Exception {
+
+        String form = "{\"nome\" : \"Exercicio a priori\", \"grupoMuscular\" : \"perna\"}";
+        mockMvc.perform(MockMvcRequestBuilders.post(uri)
+                        .content(form)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
+
+    @Test
     void naoDeveInserirUmExercicioQuandoNaoHouverGrupoMuscular() throws Exception {
 
         String form = "{\"nome\" : \"nome\", \"descricao\" : \"uma descricao\"}";
