@@ -12,4 +12,5 @@ public interface ExercicioRepository extends JpaRepository<Exercicio, Integer> {
     List<Exercicio> findAllByGrupoMuscular(GrupoMuscular nomeGrupo);
 
     Optional<Exercicio> findByNome(String nomeExercicio);
+    Optional<Exercicio> findByNomeIgnoreCase(String nomeExercicio);
 }
