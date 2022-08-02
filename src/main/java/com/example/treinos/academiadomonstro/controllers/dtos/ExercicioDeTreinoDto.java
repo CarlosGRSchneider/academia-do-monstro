@@ -5,11 +5,8 @@ import com.example.treinos.academiadomonstro.entidades.ExercicioDeTreino;
 public class ExercicioDeTreinoDto {
 
     private int id;
-
     private String nomeExercicio;
-
     private String repeticao;
-
     private Integer peso;
 
     public ExercicioDeTreinoDto(ExercicioDeTreino exercicioDeTreino) {

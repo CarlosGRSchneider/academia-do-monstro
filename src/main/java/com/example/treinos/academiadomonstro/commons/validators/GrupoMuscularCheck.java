@@ -18,13 +18,3 @@ public @interface GrupoMuscularCheck {
     Class<? extends Enum<?>> enumClass();
 
 }
-
-
-//    String message() default "Meu monstro, o grupo muscular informado não existe. Grupos possiveis = {anyOf}";
-//
-//        Class<?>[] groups() default {};
-//
-//        Class<? extends Payload>[] payload() default {};
-//
-//        GrupoMuscular[] anyOf();
-//

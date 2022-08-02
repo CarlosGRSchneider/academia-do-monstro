@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 
 @Documented
 @Constraint(validatedBy = {FieldFinderValidator.class})
-@Target({ ElementType.FIELD})
+@Target({ElementType.TYPE_USE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface FieldFinder {
 
