@@ -16,3 +16,4 @@ Se você não possui o postgres, mas quiser rodar a aplicação, pode substituir
   * método de adicionar e remover exercicios em um treino, para organizar pontualmente um treino
   * scheduler para remover os treinos que não foram realizados em mais de 15 dias e um método para get treinos ativos
   * classe de Metas, para escrever algumas metas que pretendo alcançar.
+  * documentação com o swagger
