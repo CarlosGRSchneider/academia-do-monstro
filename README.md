@@ -5,7 +5,7 @@ Esse é um projeto pessoal que eu desenvolvi, porque eu quis voltar pra academia
 
 Assim surgiu a academia do monstro.
 
-A estrutura é criar exercicios, atribuir pesos e repetições para eles, e com isso montar treinos. Por fim, há uma classe para anotar o treino que eu realizei em cada dia.
+A estrutura do projeto consiste em criar exercicios, atribuir pesos e repetições para eles, e com isso montar treinos. Por fim, há uma classe Diaria, para anotar o treino que eu realizei em cada dia.
 Os métodos que eu vou montando são baseados no que eu necessito para o momento, e todas as funcionalidades possuem testes.
 
 Se você não possui o postgres, mas quiser rodar a aplicação, pode substituir o application.properties com os valores do h2, que estão comentados.
