@@ -1,7 +1,7 @@
 # academia-do-monstro
 
 Bem vindos ao projeto da academia do monstro! 
-Esse é um projeto pessoal que eu desenvolvi, porque eu quis voltar pra academia, e eu comecei a realizar algumas planilhas para fazer o acompanhamento e evolução dos meus treinos. Eu estava montando as planilhas no excel, e tive que me deparar com um problema que todo programador passa durante a sua vida: porque fazer um trabalho manual que levaria 15 minutos quando eu posso passar 30 horas automatizando o processo?
+Esse é um projeto pessoal que eu desenvolvi, porque eu quis voltar pra academia, e eu comecei a realizar algumas planilhas para fazer o acompanhamento e evolução dos meus treinos. Eu estava montando as planilhas no excel, e tive que me deparar com um problema que todo programador passa durante a sua vida: porque fazer um trabalho manual que levaria 15 minutos quando eu posso demorar 30 horas automatizando o processo?
 
 Assim surgiu a academia do monstro.
 
