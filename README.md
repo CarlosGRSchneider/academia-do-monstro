@@ -12,8 +12,8 @@ Se você não possui o postgres, mas quiser rodar a aplicação, pode substituir
 
 # Roadmap do que ainda pretendo implementar
 
-  * classe de Diaria, para marcar os treinos que eu realizo e o dia.
   * método de adicionar e remover exercicios em um treino, para organizar pontualmente um treino
-  * scheduler para remover os treinos que não foram realizados em mais de 15 dias e um método para get treinos ativos
   * classe de Metas, para escrever algumas metas que pretendo alcançar.
   * documentação com o swagger
+  * colocar metodos put e delete para exercicio
+  * entender porque os testes não estão rodando em suite, e porque o teste de treino/patch lança exception
