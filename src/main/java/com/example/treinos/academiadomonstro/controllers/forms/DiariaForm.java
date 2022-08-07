@@ -15,7 +15,7 @@ public class DiariaForm {
     private int id;
 
     @PastOrPresent
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "dd/MM/yyyy", shape = JsonFormat.Shape.STRING)
     private LocalDate data;
 
     public DiariaForm(int id, LocalDate data) {
