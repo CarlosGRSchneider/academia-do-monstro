@@ -14,6 +14,5 @@ Se você não possui o postgres, mas quiser rodar a aplicação, pode substituir
 
   * método de adicionar e remover exercicios em um treino, para organizar pontualmente um treino
   * classe de Metas, para escrever algumas metas que pretendo alcançar.
-  * documentação com o swagger
   * colocar metodos put e delete para exercicio
   * entender porque os testes não estão rodando em suite, e porque o teste de treino/patch lança exception
