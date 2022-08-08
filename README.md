@@ -16,3 +16,4 @@ Se você não possui o postgres, mas quiser rodar a aplicação, pode substituir
   * classe de Metas, para escrever algumas metas que pretendo alcançar.
   * colocar metodos put e delete para exercicio
   * entender porque os testes não estão rodando em suite, e porque o teste de treino/patch lança exception
+  * corrigir o problema de serialização de datas
