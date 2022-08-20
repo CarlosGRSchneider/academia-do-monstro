@@ -2,6 +2,7 @@ package com.example.treinos.academiadomonstro.controllers;
 
 import com.example.treinos.academiadomonstro.commons.exceptions.MonstroException;
 import com.example.treinos.academiadomonstro.controllers.dtos.TreinoDto;
+import com.example.treinos.academiadomonstro.controllers.forms.AlteraExercicioNoTreinoForm;
 import com.example.treinos.academiadomonstro.controllers.forms.TreinoForm;
 import com.example.treinos.academiadomonstro.controllers.forms.TreinoStatusForm;
 import com.example.treinos.academiadomonstro.entidades.ExercicioDeTreino;
@@ -77,6 +78,40 @@ public class TreinoController {
             throw new MonstroException("Caro monstro, porque você quer " + msg1 + " um treino que já está " + msg2 + "?", "Status", HttpStatus.BAD_REQUEST);
         }
         treino.setSnAtivo(form.isStatus());
+        treinoRepository.save(treino);
+
+        return ResponseEntity.ok().body(new TreinoDto(treino));
+    }
+
+    @PutMapping("/exercicio/adiciona")
+    public ResponseEntity<TreinoDto> adicionaExercicioNoTreino( @RequestBody @Valid AlteraExercicioNoTreinoForm form) {
+
+        ExercicioDeTreino exercicioDeTreino = exercicioDeTreinoRepository.findById(form.getIdExercicioDeTreino()).get();
+
+        Treino treino = treinoRepository.findById(form.getIdTreino()).get();
+
+        if(treino.getExercicios().contains(exercicioDeTreino)) {
+            throw new MonstroException("Meu monstro rei, porque você quer adicionar um exercicio que ja existe no treino?", "exercicios", HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+
+        treino.adicionaExercicioNoTreino(exercicioDeTreino);
+        treinoRepository.save(treino);
+
+        return ResponseEntity.ok().body(new TreinoDto(treino));
+    }
+
+    @PutMapping("/exercicio/remove")
+    public ResponseEntity<TreinoDto> removeExercicioNoTreino( @RequestBody @Valid AlteraExercicioNoTreinoForm form) {
+
+        ExercicioDeTreino exercicioDeTreino = exercicioDeTreinoRepository.findById(form.getIdExercicioDeTreino()).get();
+
+        Treino treino = treinoRepository.findById(form.getIdTreino()).get();
+
+        if(!treino.getExercicios().contains(exercicioDeTreino)) {
+            throw new MonstroException("Meu monstro rei, porque você quer tirar um exercicio que não tem no treino?", "exercicios", HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+
+        treino.removeExercicioNoTreino(exercicioDeTreino);
         treinoRepository.save(treino);
 
         return ResponseEntity.ok().body(new TreinoDto(treino));

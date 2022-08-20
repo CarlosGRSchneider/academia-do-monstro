@@ -61,4 +61,12 @@ public class Treino {
     public void setSnAtivo(Boolean snAtivo) {
         this.snAtivo = snAtivo;
     }
+
+    public void adicionaExercicioNoTreino(ExercicioDeTreino exercicioDeTreino) {
+        this.exercicios.add(exercicioDeTreino);
+    }
+
+    public void removeExercicioNoTreino(ExercicioDeTreino exercicioDeTreino) {
+        this.exercicios.remove(exercicioDeTreino);
+    }
 }
