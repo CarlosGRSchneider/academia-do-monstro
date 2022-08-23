@@ -9,7 +9,11 @@ import java.util.List;
 public interface TreinoRepository extends JpaRepository<Treino, Integer> {
 
     @Query(value = "select tr.* from treino tr\n" +
-            "join diaria di on di.treino = tr.id \n" +
-            "where di.data < (current_date - 15)", nativeQuery = true)
+            "            join diaria di on di.treino = tr.id\n" +
+            "            where di.data < (current_date - 15)\n" +
+            "            and sn_ativo = true\n" +
+            "            and di.id not in (select distinct(tr.id) from treino tr\n" +
+            "            join diaria di on di.treino = tr.id\n" +
+            "            where di.data >= (current_date - 15))", nativeQuery = true)
     List<Treino> findAllTreinosOciosos();
 }
